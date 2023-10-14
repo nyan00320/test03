@@ -1,0 +1,373 @@
+@charset "UTF-8";
+
+/*-------------------------------------------
+　全体に関わるレイアウト設定
+-------------------------------------------*/
+
+a{
+    text-decoration: none;
+    color: black;
+}
+ 
+
+/*-------------------------------------------
+　header のレイアウト設定
+-------------------------------------------*/
+#top{
+    /* ブロック自体を中央寄せにするのはmargin:0 auto*/
+    width: 90%;
+    margin:30px auto;
+}
+
+/* ロゴとお問い合わせを横並びにする */
+#top-menu{
+    display: flex;
+}
+/* ロゴメニュー */
+#logo{
+    text-align: left;
+    margin-bottom: 30px;
+
+    /* サイズ可変 */
+    width: calc(100% - 150px);
+
+    /* フォントサイズを大きくする */
+    font-size: xx-large;
+}
+
+/* お問い合わせボタン*/
+#contact {    
+    text-align: center;
+    width: 150px;
+    height: 30px;
+    border: 1px solid #333;
+}
+.navigation__list {
+    /* 左側にpaddingが入るのでクリアする */
+    padding-left: 0px;
+
+    /* 横並び中央寄せ */
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navigation__list-item {
+    margin-left: 20px;
+    flex: 1; /* 横幅均等幅 */
+}
+ 
+.hamburger-menu {
+    display: none;
+}
+
+/*-------------------------------------------
+　mainのレイアウト設定
+-------------------------------------------*/
+
+#main{
+    margin: 100px 0px;
+    text-align: center;
+}
+
+
+/*-------------------------------------------
+　sectionごとのレイアウト設定
+-------------------------------------------*/
+
+/* 全体を中央揃えにする */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2.0rem;
+    position: relative;
+}
+
+/* ブロックを縦に表示 */
+.row {
+    display: flex;
+    padding: 0;
+    width: 100%;
+}
+
+.col {
+    display: block;
+    flex: 1 1 auto;
+    margin-left: 10px;
+    width: 28%;
+}
+
+.col img{
+    /* 縦横比を維持して縮小する imgタグに指定しないと効かない */
+    width: 90%;
+ }
+
+ /* section1 関連 */
+section #about {
+    width: 100%
+ }
+
+#form img{
+    width:50%
+}
+
+.row .col.span-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+}
+
+.span-6 img{
+    width: 50%;
+}
+
+.contact-box {
+	border: 1px solid var(--border-color);
+	text-align: center;
+	padding: 2rem 0;
+}
+.table {
+	margin: 4rem 0;
+}
+.table th {
+	width: 250px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-size: 16px;}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 150px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #0FA0CE;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 500; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+ 
+
+/*-------------------------------------------
+　footerのレイアウト設定
+-------------------------------------------*/
+
+
+ /*フッター
+-------------------------------------*/
+footer {
+    background-color: var(--back-color); 
+    padding: 5rem 0;
+}
+footer h4 {
+    border-bottom: 3px solid var(--border-color);
+}
+
+/*お問い合わせ
+-------------------------------------*/
+.contact-box {
+	border: 1px solid var(--border-color);
+	text-align: center;
+	padding: 2rem 0;
+}
+.table {
+	margin: 4rem 0;
+}
+.table th {
+	width: 250px;
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--base-color);
+}
+.copyright a {
+    color: var(--white-color);
+    text-decoration: none;
+	display: inline;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background-color: var(--base-color);
+    color: var(--white-color);
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background-color: var(--link-color);
+}
+/*-------------------------------------------
+　スマートフォンのレイアウト設定
+-------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+
+    nav{
+        padding: 0 20px; /*左右の余白確保*/
+        display: flex; /*ロゴとハンバーガーメニューを横に並べる*/
+        align-items: center;
+        justify-content: space-between;
+        height: inherit; /*親要素の高さを継承*/
+        position: relative;
+    }
+    /* メニューとお問い合わせボタンを非表示にする */
+    .navigation__list,
+    #contact{
+        display: none;
+    }
+    /* ハンバーガーメニュー*/
+    .hamburger-menu {
+        width: 50px;
+        height: 50px;
+        background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+        border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+        z-index: 9999;
+        display: block;
+    }
+    .hamburger-menu-bar {
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        position: relative;
+        transition: ease .4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+        display: block;
+    }
+    /* 3本線を引く */
+    .hamburger-menu-bar:first-child {
+        top: 0px;
+    }
+    .hamburger-menu-bar:nth-child(2) {
+        top:8px;
+    }
+    .hamburger-menu-bar:last-child {
+        top: 16px;
+    }
+    .hamburger-menu--open .hamburger-menu-bar {
+        top: 50%;
+    }
+    .hamburger-menu--open .hamburger-menu-bar:first-child {
+        transform: translateX(0) rotate(45deg);
+    }
+    .hamburger-menu--open .hamburger-menu-bar:last-child {
+        transform: translateX(0) rotate(-45deg);
+    }
+    .hamburger-menu--open .hamburger-menu-bar:nth-child(2) {
+        display: none;
+    }
+    nav:has(.hamburger-menu--open){
+        display: block;
+    }
+    .navigation {
+        display: none;
+        background: #242424;
+        position: absolute;
+        z-index: 9999;
+    }
+    .navigation__list {
+        top: 50px;
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .navigation__list-item {
+        border-bottom: solid 1px #474747;
+        height: 50px;
+        width: 100%;
+    }
+    .navigation__list-item:first-child {
+        border-top: solid 1px #474747;
+    }
+    .navigation__link {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+        padding: 24px 0;
+        transition: .5s;
+    }
+
+    .row {
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .col {
+        width: 100%;
+    }
+
+    .span-6 img{
+        width: 100%;
+    }
+
+    .table th {
+        width: 100%;
+        display: block;
+    }	
+    .table td {
+        display: block;
+    }
+}
