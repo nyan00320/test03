@@ -70,6 +70,10 @@ a{
     text-align: center;
 }
 
+.gray-back {
+	background-color: #f7f7f7;
+}
+
 
 /*-------------------------------------------
 　sectionごとのレイアウト設定
@@ -120,11 +124,6 @@ section #about {
     width: 50%;
 }
 
-.contact-box {
-	border: 1px solid var(--border-color);
-	text-align: center;
-	padding: 2rem 0;
-}
 .table {
 	margin: 4rem 0;
 }
@@ -215,7 +214,7 @@ footer h4 {
 /*お問い合わせ
 -------------------------------------*/
 .contact-box {
-	border: 1px solid var(--border-color);
+	border: 1px solid black;
 	text-align: center;
 	padding: 2rem 0;
 }
@@ -248,14 +247,11 @@ footer h4 {
 }
 #pagetop a {
     display: block;
-    background-color: var(--base-color);
-    color: var(--white-color);
+    background-color: black;
+    color: white;
     width: 50px;
     padding: 10px 5px;
     text-align: center;
-}
-#pagetop a:hover {
-    background-color: var(--link-color);
 }
 /*-------------------------------------------
 　スマートフォンのレイアウト設定
@@ -348,7 +344,9 @@ footer h4 {
         padding: 24px 0;
         transition: .5s;
     }
-
+    #main img {
+        width: 100%;
+    }
     .row {
         display: block;
         padding: 0;
@@ -369,5 +367,9 @@ footer h4 {
     }	
     .table td {
         display: block;
+    }
+
+    .row .col.span-6{
+        max-width: 100%;
     }
 }
